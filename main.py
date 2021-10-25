@@ -25,6 +25,7 @@ epd = False
 
 class stdin_reader(threading.Thread):
     def __init__(self):
+        Thread.__init__(self)
         self.q = Queue()
 
     def run(self):
